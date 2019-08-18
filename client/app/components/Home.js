@@ -30,7 +30,7 @@ const Home = props => {
         <>
             <div className="home-container">
             <h1>Articles</h1>
-                {/* {loading ? null : mapArticles(articles)} */}
+                {loading ? null : mapArticles(articles)}
             </div>
         </>
     )

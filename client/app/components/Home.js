@@ -12,6 +12,7 @@ const Home = props => {
         axios.get("/articles").then(res => {
 
             setArticles(res.data)
+            console.log(articles)
             setLoading(false)
             console.log(res.data);
         })
@@ -29,7 +30,7 @@ const Home = props => {
         <>
             <div className="home-container">
             <h1>Articles</h1>
-                {loading ? null : mapArticles(articles)}
+                {/* {loading ? null : mapArticles(articles)} */}
             </div>
         </>
     )

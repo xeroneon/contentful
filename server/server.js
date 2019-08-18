@@ -53,7 +53,7 @@ if (isDev) {
   app.use(express.static(path.resolve(__dirname, '../dist')));
   app.get('*', function (req, res) { res.sendFile(path.resolve(__dirname, '../dist/index.html'), (err) => { if (err) { console.log(err); } res.end() }); });
 }
-app.use('/', articles)
+app.use('/articles', articles)
 
 app.listen(port, '0.0.0.0', (err) => {
   if (err) {

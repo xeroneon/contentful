@@ -23,12 +23,12 @@ router.use(function (req, res, next) {
   })
 })
 
-router.get('/articles/:slug', function (req, res, next) {
+router.get('/:slug', function (req, res, next) {
   // res.render('product', {title: req.product.fields.productName, product: req.product})
   res.send({article: req.article});
 })
 
-router.get('/articles', function (req, res, next) {
+router.get('/', function (req, res, next) {
   res.json(req.articles)
 })
 

@@ -1,26 +1,28 @@
-const React = require('react')
-const PropTypes = require('prop-types')
-const hljs = window.hljs
+// const React = require('react')
+import React from "react"
+// const PropTypes = require('prop-types')
+import PropTypes from "prop-types"
 
 class CodeBlock extends React.PureComponent {
   constructor(props) {
     super(props)
     this.setRef = this.setRef.bind(this)
   }
-
+  
   setRef(el) {
     this.codeEl = el
   }
-
+  
   componentDidMount() {
     this.highlightCode()
   }
-
+  
   componentDidUpdate() {
     this.highlightCode()
   }
-
+  
   highlightCode() {
+    const hljs = window.hljs
     hljs.highlightBlock(this.codeEl)
   }
 

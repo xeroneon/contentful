@@ -1,11 +1,12 @@
 import React from 'react';
 import {
   Route,
-  Switch
+  Switch,
+  Link
 } from 'react-router-dom'
 
 import NotFound from '../App/NotFound';
-import Nav from "../Nav";
+// import Nav from "../Nav";
 import Home from "../Home"
 import ArticlePage from "../ArticlePage"
 
@@ -13,7 +14,13 @@ import ArticlePage from "../ArticlePage"
 const App = (props) => (
   <>
     <main>
-      <Nav />
+      <nav>
+        <Link to="/" style={{ textDecoration: "none" }}>
+          <span>
+            Article Viewer
+          </span>
+        </Link>
+      </nav>
       <Switch>
         <Route exact path="/" component={Home} />
         <Route exact path="/articles/:slug" component={ArticlePage} />

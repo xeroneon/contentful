@@ -21,7 +21,9 @@ const Home = props => {
         <>
             <div className="home-container">
             <h1>Articles</h1>
-                {loading ? null : articles.map(article => <Article article={article} key={article.sys.id} />)}
+                {loading ? null : articles.map(article => {
+                    return <Article article={article} key={article.sys.id} />
+                })}
             </div>
         </>
     )

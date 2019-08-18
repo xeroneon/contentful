@@ -38,5 +38,5 @@ module.exports = merge(commonConfig, {
     //     sourceMap: true
     //   })
     // ]
-  }
+  // }
 });

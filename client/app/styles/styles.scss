@@ -1,0 +1,132 @@
+@import 'vendor/normalize';
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background: #444;
+    color: white;
+}
+
+table ,th, td {
+    border: 2px solid white;
+    border-collapse: collapse;
+    padding: 5px;
+    text-align: left;
+}
+
+code {
+    background: #999 !important;
+}
+
+nav {
+    background: #333;
+    display: grid;
+    align-items: center;
+    height: 60px;
+    padding-left: 30px;
+
+    span {
+        color: white;
+        font-size: 20px;
+        font-weight: bold;
+        text-decoration: none !important;
+    }
+}
+
+a {
+    text-decoration: none;
+}
+
+.home-container {
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: 1fr;
+    margin: 0 20px 0 20px;
+
+    h1 {
+        justify-self: center;
+    }
+}
+
+.article-li {
+    background: #333;
+    border-radius: 10px;
+    padding: 10px;
+    color: white;
+    height: 200px;
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+
+    h1, p {
+        margin-left: 10px;
+    }
+
+    span {
+        margin-right: 10px;
+    }
+
+    div {
+        // display: flex;
+
+        div {
+            display: flex;
+            justify-content: flex-end;
+        }
+    }
+
+
+    img {
+        // height: 100%;
+        width: 100%;
+        border-radius: 10px;
+        align-self: center;
+        max-height: 90%;
+    }
+}
+
+.article-container {
+    width: 100%;
+    margin-top: 50px;
+    display: grid;
+    justify-items: center;
+    min-height: 90vh;
+    grid-template-columns: 1fr;
+    
+    article {
+        border-radius: 10px;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: .5fr .1fr 6fr .1fr .5fr;
+        width: 80%;
+        max-width: 1000px;
+        background: #333;
+
+        .article-body {
+            margin: 20px;
+            display: block;
+
+            a {
+                color: orange;
+            }
+        }
+
+        hr {
+            width: 100%;
+        }
+
+        .title {
+            margin-left: 30px;
+        }
+
+        span {
+            align-self: end;
+            margin-right: 20px;
+        }
+
+        div {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+        }
+    }
+
+}

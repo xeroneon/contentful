@@ -17,13 +17,19 @@ const Home = props => {
         })
     },[])
 
+    const mapArticles = articles => {
+        const elements = []
+        for(let i = 0; i < articles.length; i++) {
+            elements.push(<Article article={articles[i]} key={articles[i].sys.id} />)
+        }
+        return elements
+    }
+
     return(
         <>
             <div className="home-container">
             <h1>Articles</h1>
-                {loading ? null : articles.map(article => {
-                    return <Article article={article} key={article.sys.id} />
-                })}
+                {loading ? null : mapArticles(articles)}
             </div>
         </>
     )

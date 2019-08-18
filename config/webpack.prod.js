@@ -14,14 +14,14 @@ module.exports = merge(commonConfig, {
     chunkFilename: '[id].[hash].chunk.js'
   },
 
-  optimization: {
-    minimizer: 
-    [new TerserPlugin({
-      parallel: true,
-      terserOptions: {
-        ecma: 6,
-      },
-    })]
+  // optimization: {
+  //   minimizer: 
+  //   [new TerserPlugin({
+  //     parallel: true,
+  //     terserOptions: {
+  //       ecma: 6,
+  //     },
+  //   })]
     // [
     //   // we specify a custom UglifyJsPlugin here to get source maps in production
     //   new UglifyJsPlugin({
@@ -35,5 +35,5 @@ module.exports = merge(commonConfig, {
     //     sourceMap: true
     //   })
     // ]
-  }
+  // }
 });
